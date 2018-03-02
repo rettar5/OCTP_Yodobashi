@@ -30,7 +30,7 @@ export class Yodobashi {
    * @returns {boolean}
    */
   static isValid(tweetData: OdnTweetData): boolean {
-    return tweetData.text.match(/^.*(ヨドバシ|ﾖﾄﾞﾊﾞｼ).*$/gi) ? true : false;
+    return false === tweetData.isRetweet && tweetData.text.match(/^.*(ヨドバシ|ﾖﾄﾞﾊﾞｼ).*$/gi) ? true : false;
   }
 }
 
